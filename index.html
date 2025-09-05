@@ -432,22 +432,6 @@ mainMenuToggle.addEventListener('click', function() {
     mainContent.classList.toggle('full-width');
 });
 
-// Optional: Hide sidebar by default on small screens
-window.addEventListener('resize', function() {
-    if (window.innerWidth < 900) {
-        mainSidebar.classList.add('hidden');
-        mainContent.classList.add('full-width');
-    } else {
-        mainSidebar.classList.remove('hidden');
-        mainContent.classList.remove('full-width');
-    }
-});
-// Initial check
-if (window.innerWidth < 900) {
-    mainSidebar.classList.add('hidden');
-    mainContent.classList.add('full-width');
-}
-
 
 
 // Open popup only for the hero "Hire Developers" button
