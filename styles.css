@@ -88,7 +88,8 @@ html[data-theme="light"] .sidebar .sidebar-menu li a:hover {
 
 html[data-theme="light"] .hero-section {
     /* background: linear-gradient(135deg,#e0e7ff 0,#f9fafb 100%); */
-        background: linear-gradient(135deg, #591C88 0, #D82778 100%);
+        /* background: linear-gradient(135deg, #591C88 0, #D82778 100%); */
+        background: linear-gradient(135deg, #591C88 0, #2748d8 100%);
 }
 
 html[data-theme="light"] .profile-card h2 {
@@ -1540,6 +1541,7 @@ body {
     min-height: 100vh
 }
 
+
 .sidebar-toggle {
     display: none;
     background: 0;
@@ -1593,6 +1595,24 @@ body {
 
 .sidebar .sidebar-menu li:hover {
     color: #0ff
+}
+.sidebar.hidden {
+    display: none;
+}
+.main-content.full-width .content {
+    width: 100%;
+    margin-left: 0;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    margin-right: auto;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 30px;
+    position: relative;
+    top: 4px;
 }
 
 .content {
@@ -2213,6 +2233,9 @@ body {
 }
 
 @media(max-width: 1024px) {
+    .heading-title{
+        text-align: center;
+    }
     .sidebar-menu {
         display:none;
         flex-wrap: wrap;
@@ -2234,7 +2257,9 @@ body {
     .main-content {
         flex-direction: column
     }
-
+    .menu-toggle{
+        display: none;
+    }
     .sidebar-toggle {
         display: block
     }
@@ -2246,6 +2271,9 @@ body {
     .inner-content {
         grid-template-columns: 1fr
     }
+    .hero-actions {
+     justify-content: center;
+   }
 }
 
 @media(max-width: 900px) {
@@ -2480,7 +2508,7 @@ body>form:nth-child(1) {
     justify-content: space-between;
     background: linear-gradient(120deg, #6a1bc2 0%, #e04fd5 100%);
     padding: 60px 40px 60px 60px;
-    border-radius: 40px ;
+    border-radius: 25px ;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -2633,7 +2661,7 @@ body>form:nth-child(1) {
     gap: 40px;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 .founder-container .heading-title{
@@ -2743,6 +2771,14 @@ text-align:left;
         align-items: stretch;
     }
     .founder-right {
-        align-items: flex-start;
+        align-items: center;
+    }
+     .sidebar {
+        display: none;
+    }
+    .main-content .content {
+        width: 100%;
+        margin-left: 0;
     }
 }
+

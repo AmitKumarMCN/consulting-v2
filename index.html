@@ -18,6 +18,10 @@
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="C# Corner Logo" />
             </a>
+              <!-- Toggle button for sidebar -->
+        <button class="menu-toggle" id="mainMenuToggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
             <div class="contact">
                 <span>Call Us</span>
                 <span class="phone">(888) 855-8444</span>
@@ -418,6 +422,34 @@
 
 
 <script>
+// Main menu toggle for sidebar and content width
+const mainMenuToggle = document.getElementById('mainMenuToggle');
+const mainSidebar = document.querySelector('.sidebar');
+const mainContent = document.querySelector('.main-content');
+
+mainMenuToggle.addEventListener('click', function() {
+    mainSidebar.classList.toggle('hidden');
+    mainContent.classList.toggle('full-width');
+});
+
+// Optional: Hide sidebar by default on small screens
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 900) {
+        mainSidebar.classList.add('hidden');
+        mainContent.classList.add('full-width');
+    } else {
+        mainSidebar.classList.remove('hidden');
+        mainContent.classList.remove('full-width');
+    }
+});
+// Initial check
+if (window.innerWidth < 900) {
+    mainSidebar.classList.add('hidden');
+    mainContent.classList.add('full-width');
+}
+
+
+
 // Open popup only for the hero "Hire Developers" button
 document.querySelector('#HereDevelopers').addEventListener('click', function(e) {
     e.preventDefault();
@@ -431,7 +463,7 @@ window.addEventListener('click', function(e) {
     if (e.target === popup) popup.style.display = 'none';
 });
 
-// Sidebar responsive toggle
+// // Sidebar responsive toggle
 const sidebar = document.querySelector('.sidebar');
 const sidebarToggle = document.getElementById('sidebarToggle');;
 
