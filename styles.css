@@ -1579,7 +1579,7 @@ body {
 .main-content.full-width .content {
     width: 100%;
     margin-left: 0;
-    padding: 2rem 1rem;
+    padding:1rem;
 }
 .menu-toggle {
     background: none;
@@ -1625,7 +1625,7 @@ body {
 
 .content {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 40px
@@ -2516,7 +2516,6 @@ body>form:nth-child(1) {
     justify-content: space-between;
     background: linear-gradient(120deg, #6a1bc2 0%, #e04fd5 100%);
     padding: 60px 40px 60px 60px;
-    border-radius: 25px ;
     color: #fff;
     position: relative;
     overflow: hidden;
