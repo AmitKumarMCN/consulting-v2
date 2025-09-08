@@ -1637,7 +1637,7 @@ body {
     /* background: linear-gradient(120deg,#350e7b 60%,#17407e 100%); */
     color: #f3eaff;
     padding: 1.5rem 2rem;
-    border-radius: 18px;
+/*    border-radius: 18px;*/
     position: relative;
     overflow: hidden
 }
